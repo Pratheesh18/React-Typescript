@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import BudgetOverview from './components/BudgetOverview';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const homeBudgets = [
+  {
+    budgeted : 500,
+    spent : 200,
+    category : "Food",
+  },
+  
+  {
+    budgeted : 1000,
+    spent : 1500,
+    category : "Utilities",
+  }
+
+]
+
+
+const App = () => {
+  return(
+    <div className='App'>
+      <header className='App-header'>  Budget table using Typescript & React </header>
+      <BudgetOverview budgets = {homeBudgets} />
     </div>
-  );
+  )
 }
-
-export default App;
